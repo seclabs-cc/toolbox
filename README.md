@@ -10,7 +10,23 @@
 
 This toolbox includes several updated tools for red team assessments and bug bounty running exclusively on docker
 
-*Tools*
+## Usage
+
+You can pull the container image directly from GitHub Container Registry (GHCR):
+
+```bash
+docker pull ghcr.io/seclabs-cc/toolbox:latest
+```
+
+To run a tool from the image:
+```bash
+echo "https://google.com" | docker run -i ghcr.io/seclabs-cc/toolbox:latest katana
+```
+
+For convenience you can export the commands directly in your zsh or bash profile and use as "local" commands.
+
+
+## *Tools*
 
 | Pkg                                                         | Info                                                                                                                                                              |
 | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,14 +65,6 @@ This toolbox includes several updated tools for red team assessments and bug bou
 | [trufflehog](https://github.com/trufflesecurity/trufflehog) | Find leaked credentials.                                                                                                                                          |
 | [unfurl](https://github.com/tomnomnom/unfurl)               | Pull out bits of URLs provided on stdin                                                                                                                           |
 | [xurlfind3r](https://github.com/hueristiq/xurlfind3r/)      | Find domain's known URLs passively from several sources                                                                                                           |
-## Usage
-
-```
-echo "https://google.com"  | docker run -i securitybydesign/toolbox hakrawler -subs
-```
-
-For convenience you can export the commands directly in your zsh or bash profile and use as "local" commands
-
 ## Build locally
 
 ```
